@@ -1776,3 +1776,23 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+select * from ogrenci;
+14 - SELECT ograd, ogrsoyad, cinsiyet, sinif FROM ogrenci WHERE sinif IN ('10A', '10B') AND cinsiyet = 'E';
+15 - SELECT * FROM ogrenci WHERE dtarih like '1989%';
+16 - SELECT * FROM ogrenci WHERE cinsiyet = 'K' AND ogrno > 30 AND ogrno < 50;
+17 - SELECT * FROM ogrenci ORDER BY ograd ASC;
+18 –  SELECT * FROM ogrenci ORDER BY ograd, ogrsoyad;
+19 - SELECT * FROM ogrenci ORDER BY ogrno DESC;
+20 - SELECT * FROM ogrenci LIMIT 10;
+21 - SELECT ograd, ogrsoyad, dtarih FROM ogrenci LIMIT 10;
+22 -  SELECT * FROM kitap ORDER BY sayfasayisi DESC LIMIT 1;
+23 -   SELECT * FROM ogrenci ORDER BY dtarih DESC LIMIT 1;
+24 -   SELECT * FROM ogrenci WHERE sinif = '10A' AND dtarih IS NOT NULL ORDER BY dtarih ASC LIMIT 1;
+25 -   SELECT * FROM kitap WHERE kitapadi LIKE '_n%';
+26 -   SELECT * FROM ogrenci ORDER BY sinif;
+27 -   SELECT * FROM ogrenci ORDER BY RAND();
+28 -   SELECT * FROM ogrenci ORDER BY RAND() LIMIT 1;
+29 -   SELECT ogrno, ograd, ogrsoyad, sinif FROM ogrenci WHERE sinif = '10A' ORDER BY RAND() LIMIT 1;
+30 - SELECT ograd AS isim, count(ograd) AS adet FROM ogrenci GROUP BY ograd;
